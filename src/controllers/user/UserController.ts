@@ -1,4 +1,4 @@
-import {json, Request, Response} from 'express';
+import {Request, Response} from 'express';
 import {UserService} from '../../services/user/UserService'
 
 const userService = new UserService();
