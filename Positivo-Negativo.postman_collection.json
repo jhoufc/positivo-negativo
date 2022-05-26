@@ -1,0 +1,416 @@
+{
+	"info": {
+		"_postman_id": "1c99d198-bfaf-432b-b3a1-ac0e6bb80412",
+		"name": "Positivo-Negativo",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Users",
+			"item": [
+				{
+					"name": "CreateUser",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"paulo\",\r\n    \"user\": \"phzin\",\r\n    \"password\": \"1q2w3e\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3333/create-user",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3333",
+							"path": [
+								"create-user"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "AuthUser",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"user\": \"jhowsasco\",\r\n    \"password\": \"1234\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3333/auth-user",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3333",
+							"path": [
+								"auth-user"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "UpdatePassword",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYyOGFjNWY2NTE2ZDRlYzA5MTRiYmExNSIsImlhdCI6MTY1MzM1NDkxOCwiZXhwIjoxNjUzNDQxMzE4fQ.ddyl2EP-zeZpC70WtjN49qYQLGcptXdT4gMTNprHUCA",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "auth",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYyOGFjNWY2NTE2ZDRlYzA5MTRiYmExNSIsImlhdCI6MTY1MzI3Mzg0MywiZXhwIjoxNjUzMzYwMjQzfQ.8I04uuCIz-j9ytfiW7Qe-ZuvnTLZ1GOncphlBxKl2X8",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"oldPassword\": \"Jonathan!@#123\",\r\n    \"newPassword\": \"1234\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3333/update-password",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3333",
+							"path": [
+								"update-password"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "UserDetails",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYyOGFjNWY2NTE2ZDRlYzA5MTRiYmExNSIsImlhdCI6MTY1MzM1NDkxOCwiZXhwIjoxNjUzNDQxMzE4fQ.ddyl2EP-zeZpC70WtjN49qYQLGcptXdT4gMTNprHUCA",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "auth",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYyOGFjNWY2NTE2ZDRlYzA5MTRiYmExNSIsImlhdCI6MTY1MzI3Mzg0MywiZXhwIjoxNjUzMzYwMjQzfQ.8I04uuCIz-j9ytfiW7Qe-ZuvnTLZ1GOncphlBxKl2X8",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:3333/me",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3333",
+							"path": [
+								"me"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Category",
+			"item": [
+				{
+					"name": "CreateCategory",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYyOGFjNWY2NTE2ZDRlYzA5MTRiYmExNSIsImlhdCI6MTY1MzM1NDkxOCwiZXhwIjoxNjUzNDQxMzE4fQ.ddyl2EP-zeZpC70WtjN49qYQLGcptXdT4gMTNprHUCA",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"casa\",\r\n    \"icon\": \"house\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3333/create-category",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3333",
+							"path": [
+								"create-category"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "ReadCategory",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYyOGFjNWY2NTE2ZDRlYzA5MTRiYmExNSIsImlhdCI6MTY1MzM1NDkxOCwiZXhwIjoxNjUzNDQxMzE4fQ.ddyl2EP-zeZpC70WtjN49qYQLGcptXdT4gMTNprHUCA",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3333/read-category",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3333",
+							"path": [
+								"read-category"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "UpdateCategory",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYyOGFjNWY2NTE2ZDRlYzA5MTRiYmExNSIsImlhdCI6MTY1MzM1NDkxOCwiZXhwIjoxNjUzNDQxMzE4fQ.ddyl2EP-zeZpC70WtjN49qYQLGcptXdT4gMTNprHUCA",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"lição\",\r\n    \"category_id\": \"628d6c33ce5f4dac72b1a176\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3333/update-category",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3333",
+							"path": [
+								"update-category"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DeleteCategory",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYyOGFjNWY2NTE2ZDRlYzA5MTRiYmExNSIsImlhdCI6MTY1MzM1NDkxOCwiZXhwIjoxNjUzNDQxMzE4fQ.ddyl2EP-zeZpC70WtjN49qYQLGcptXdT4gMTNprHUCA",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"category_id\": \"628d6bc0ce5f4dac72b1a16b\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3333/delete-category",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3333",
+							"path": [
+								"delete-category"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Task",
+			"item": [
+				{
+					"name": "CreateTask",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYyOGFjNWY2NTE2ZDRlYzA5MTRiYmExNSIsImlhdCI6MTY1MzUyNDAzNCwiZXhwIjoxNjUzNjEwNDM0fQ.AvTVEhW2g_wgFJ0rtI9LhV_Lwa5cK5yFaOWWNuGt-CM",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Aparecer Amanha\",\r\n    \"repeatble\": 1,\r\n    \"category_id\": \"628d6c85ce5f4dac72b1a17b\",\r\n    \"start_date\": \"2022-05-26\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3333/create-task",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3333",
+							"path": [
+								"create-task"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "ListByDate",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYyOGFjNWY2NTE2ZDRlYzA5MTRiYmExNSIsImlhdCI6MTY1MzUyNDAzNCwiZXhwIjoxNjUzNjEwNDM0fQ.AvTVEhW2g_wgFJ0rtI9LhV_Lwa5cK5yFaOWWNuGt-CM",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"date\": \"2022-05-26\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3333/task-by-date",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3333",
+							"path": [
+								"task-by-date"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "ListByCategory",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYyOGFjNWY2NTE2ZDRlYzA5MTRiYmExNSIsImlhdCI6MTY1MzQzNDUzNCwiZXhwIjoxNjUzNTIwOTM0fQ.erdVAyQTNIRoXVuRArdd8PhlIgN5utwLljNZ4A8YKJY",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"category_id\": \"628d6c85ce5f4dac72b1a17b\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3333/task-by-category",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3333",
+							"path": [
+								"task-by-category"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
