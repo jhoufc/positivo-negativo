@@ -5,6 +5,7 @@ import mongoose from 'mongoose';
 import bodyParser from 'body-parser';
 import cors from 'cors';
 import {config} from "../config/config";
+const port = process.env.PORT || 3333;
 
 const app = express();
 app.use(express.json());
@@ -50,5 +51,5 @@ app.use((err: Error, req: Request, res: Response, next: NextFunction) => {
 });
 //#endregion
 
-app.listen(3333, () => console.log('server up !'));
+app.listen(port, () => console.log('server up !'));
 
